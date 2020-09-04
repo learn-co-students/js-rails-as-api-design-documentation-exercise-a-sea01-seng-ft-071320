@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an API to get information on dogs.
 
-Things you may want to cover:
+To access the API, from the frontend, the main route you'll use is:
 
-* Ruby version
+`http://localhost:3000/dog_search`
 
-* System dependencies
+The path accepts two queries, a search query and an optional parameter to sort the list by a property:
 
-* Configuration
+`http://localhost:3000/dog_search?query="byron"&sort_field="breed"`
 
-* Database creation
+`name` is the default sort_field if nothing is specified.
 
-* Database initialization
+It will render JSON as an array of dog objects. A dog object looks like:
 
-* How to run the test suite
+```
+  {
+    name: "Fluffy",
+    breed: "Miniature Schnauser",
+    age: "347",
+    size: "Immeasurable",
+    phrase: "I am Fluffy, Destroyer of Worlds",
+  }
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Keep in mind that dog_search is the **only** endpoint on the API.
 
-* Deployment instructions
-
-* ...
+Good luck!
